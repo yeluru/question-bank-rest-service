@@ -71,5 +71,6 @@ Foreign-key constraints:
 
 #Testing
 
-After deploying qb.war in the tomcat container and the database tables and test data is ready, this service can be tested as
+After deploying qb.war in the tomcat container and the database tables and test data is ready, this service can be tested at
+
 http://localhost:8080/qb/webapi/qb/questions/list
