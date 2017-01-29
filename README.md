@@ -71,6 +71,8 @@ Foreign-key constraints:
 
 #Testing
 
-After deploying qb.war in the tomcat container and the database tables and test data is ready, this service can be tested at
+After deploying qb.war in the tomcat container and the database tables and test data is ready, this service can be tested at that returns a JSON as below
+
+[{"id":1,"name":"What is the Area of a circle?","topic":{"id":1,"name":"Geometry","subject":{"id":1,"name":"Math"}}},{"id":2,"name":"if condition","topic":{"id":2,"name":"Conditions","subject":{"id":2,"name":"Java"}}},{"id":3,"name":"Area of Triangle","topic":{"id":1,"name":"Geometry","subject":{"id":1,"name":"Math"}}}]
 
 http://localhost:8080/qb/webapi/qb/questions/list
