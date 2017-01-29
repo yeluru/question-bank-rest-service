@@ -7,13 +7,10 @@ Pre-requisites: git, maven, java, tomcat, postgres
 Step 1: check out the code
 
 git clone https://github.com/yeluru/rest-examples
-
 Step 2: build the code
 
 cd question-bank-rest-service
-
 mvn clean package
-
 Step 3: deploy the code
 
 cp target/qb.war <tomcat-installation-directory>/webapps
