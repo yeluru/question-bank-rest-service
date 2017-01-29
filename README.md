@@ -16,7 +16,7 @@ mvn clean package
 
 Step 3: deploy the code
 
-cp target/qb.war <tomcat-installation-directory>/webapps
+cp target/qb.war &lt;tomcat-installation-directory&gt;/webapps
 
 Step 4: make db ready
 
