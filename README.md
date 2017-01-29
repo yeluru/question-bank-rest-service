@@ -10,7 +10,7 @@ git clone https://github.com/yeluru/rest-examples
 
 Step 2: build the code
 
-cd question-bank-rest-service
+cd rest-examples/question-bank-rest-service
 
 mvn clean package
 
