@@ -7,10 +7,13 @@ Pre-requisites: git, maven, java, tomcat, postgres
 Step 1: check out the code
 
 git clone https://github.com/yeluru/rest-examples
+
 Step 2: build the code
 
 cd question-bank-rest-service
+
 mvn clean package
+
 Step 3: deploy the code
 
 cp target/qb.war <tomcat-installation-directory>/webapps
@@ -18,6 +21,7 @@ cp target/qb.war <tomcat-installation-directory>/webapps
 Step 4: make db ready
 
 1: Create table subject
+
 id     | integer | not null  | 
 
 name   | text    |           |
@@ -31,6 +35,7 @@ Referenced by:
 TABLE "topic" CONSTRAINT "Topic_subject_id_fkey" FOREIGN KEY (subject_id) REFERENCES subject(id)
 
 2: Create table topic
+
 id         | integer | not null  | plain    |              | 
 
 name       | text    |           | extended |              | 
@@ -63,3 +68,8 @@ Indexes:
 Foreign-key constraints:
 
 "Questions_topic_id_fkey" FOREIGN KEY (topic_id) REFERENCES topic(id)
+
+#Testing
+
+After deploying qb.war in the tomcat container and the database tables and test data is ready, this service can be tested as
+http://localhost:8080/qb/webapi/qb/questions/list
