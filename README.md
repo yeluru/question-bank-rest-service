@@ -1,5 +1,6 @@
-#rest-examples/question-bank-rest-service
-#Simple Rest Service using Java, Postgres.
+#Simple Rest Service using Java, Postgres. 
+
+This example mimics question bank service where a subject will have 1 or more topics, a topic will have 1 or more questions.
 Pre-requisites: git, maven, java, tomcat, postgres
 Step 1: check out the code
 git clone https://github.com/yeluru/rest-examples
