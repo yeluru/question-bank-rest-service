@@ -20,15 +20,11 @@ cp target/qb.war <tomcat-installation-directory>/webapps
 
 Step 4: make db ready
 
-Create table subject with below structure
+Create table subject
 
-Column |  Type   | Modifiers | Storage  | Stats target | Description 
+id     | integer | not null  | 
 
---------+---------+-----------+----------+--------------+-------------
-
-id     | integer | not null  | plain    |              | 
-
-name   | text    |           | extended |              | 
+name   | text    |           |
 
 Indexes:
 
@@ -39,10 +35,6 @@ Referenced by:
 TABLE "topic" CONSTRAINT "Topic_subject_id_fkey" FOREIGN KEY (subject_id) REFERENCES subject(id)
 
 Create table Topic
-
-   Column   |  Type   | Modifiers | Storage  | Stats target | Description 
-
-------------+---------+-----------+----------+--------------+-------------
 
 id         | integer | not null  | plain    |              | 
 
