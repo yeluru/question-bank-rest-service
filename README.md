@@ -55,9 +55,14 @@ TABLE "question" CONSTRAINT "Questions_topic_id_fkey" FOREIGN KEY (topic_id) REF
 3: Create table question
  
  id       | integer | not null  | plain    |              | 
+ 
  name     | text    |           | extended |              | 
+ 
  topic_id | integer |           | plain    |              | 
+
 Indexes:
     "Questions_pkey" PRIMARY KEY, btree (id)
+
 Foreign-key constraints:
-    "Questions_topic_id_fkey" FOREIGN KEY (topic_id) REFERENCES topic(id)
+
+"Questions_topic_id_fkey" FOREIGN KEY (topic_id) REFERENCES topic(id)
