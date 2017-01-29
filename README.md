@@ -20,9 +20,8 @@ cp target/qb.war <tomcat-installation-directory>/webapps
 
 Step 4: make db ready
 
-Create table subject
-
-id     | integer | not null  | 
+1: Create table subject
+id     | integer | not null  | 
 
 name   | text    |           |
 
@@ -34,9 +33,8 @@ Referenced by:
 
 TABLE "topic" CONSTRAINT "Topic_subject_id_fkey" FOREIGN KEY (subject_id) REFERENCES subject(id)
 
-Create table Topic
-
-id         | integer | not null  | plain    |              | 
+2: Create table topic
+id         | integer | not null  | plain    |              | 
 
 name       | text    |           | extended |              | 
 
@@ -53,3 +51,13 @@ Foreign-key constraints:
 Referenced by:
 
 TABLE "question" CONSTRAINT "Questions_topic_id_fkey" FOREIGN KEY (topic_id) REFERENCES topic(id)
+
+3: Create table question
+ 
+ id       | integer | not null  | plain    |              | 
+ name     | text    |           | extended |              | 
+ topic_id | integer |           | plain    |              | 
+Indexes:
+    "Questions_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "Questions_topic_id_fkey" FOREIGN KEY (topic_id) REFERENCES topic(id)
